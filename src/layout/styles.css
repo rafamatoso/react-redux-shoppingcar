@@ -4,33 +4,33 @@
 html,
 body,
 #root {
-	height: 100%;
+  height: 100%;
 }
 
 /** Layout **/
 
 .l-header {
-	grid-area: lheader;
+  grid-area: lheader;
 }
 
 .l-content {
-	grid-area: lcontent;
+  grid-area: lcontent;
 }
 
 .l-footer {
-	grid-area: lfooter;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  grid-area: lfooter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	background-color: #ddd;
-	font-weight: bold;
+  background-color: #ddd;
+  font-weight: bold;
 }
 
 #root {
-	display: grid;
+  display: grid;
 
-	grid-template-columns: 1fr;
-	grid-template-rows: 55px 1fr 55px;
-	grid-template-areas: 'lheader' 'lcontent' 'lfooter';
+  grid-template-columns: 1fr;
+  grid-template-rows: 55px 1fr 55px;
+  grid-template-areas: 'lheader' 'lcontent' 'lfooter';
 }

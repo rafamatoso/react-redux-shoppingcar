@@ -1,13 +1,19 @@
 import { createAction, createReducer } from '@reduxjs/toolkit';
 
-const INITIAL_STATE = { showMessage: false };
+const INITIAL_STATE = { messages: [] };
 
 // Action Refactored
-export const showMessage = createAction('SHOW_MESSAGE');
-export const hideMessage = createAction('HIDE_MESSAGE');
+export const addMessage = createAction('ADD_MESSAGE');
+export const removeMessage = createAction('REMOVE_MESSAGE');
 
 // Reducer Refactored
 export default createReducer(INITIAL_STATE, {
-  [showMessage.type]: (state, action) => ({ ...state, showMessage: true }),
-  [hideMessage.type]: (state, action) => ({ ...state, showMessage: false })
+  [addMessage.type]: (state, action) => ({
+    ...state,
+    messages: [...state.messages, action.payload]
+  }),
+  [removeMessage.type]: (state, action) => ({
+    ...state,
+    messages: state.messages.filter(mg => mg !== action.payload)
+  })
 });

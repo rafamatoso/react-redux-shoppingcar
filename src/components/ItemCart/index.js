@@ -9,7 +9,7 @@ export default function ItemCart({ item, removeItemCart }) {
           <img src={item.url} alt={item.name} style={{ width: '100%' }}></img>
         </div>
         <button
-          onClick={() => removeItemCart(item._id)}
+          onClick={() => removeItemCart(item)}
           className="btn btn-danger"
           style={{
             width: 50,

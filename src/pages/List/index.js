@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Car from '../../components/Car';
-
 import { getAllCars } from '../../store/fetchActions';
 import { addItem } from '../../store/ducks/cart';
 import { addMessage } from '../../store/ducks/layout';

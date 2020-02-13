@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-
 import { addMessage } from '../../store/ducks/layout';
-
 import { addCarFetch } from '../../store/fetchActions';
 
 export default function Add() {
@@ -15,11 +13,8 @@ export default function Add() {
 
   function onSubmit(e) {
     e.preventDefault();
-
     dispatch(addCarFetch(form));
-
     setForm({ name: '', url: '' });
-
     dispatch(addMessage('Cadastro com Sucesso!!!'));
   }
 
